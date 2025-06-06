@@ -1,5 +1,8 @@
+from pathlib import Path
+import sys
 import unittest
-from md2excel import MarkdownToExcelConverter
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.md2excel import MarkdownToExcelConverter
 
 class TestMarkdownToExcel(unittest.TestCase):
     def test_conversion(self):

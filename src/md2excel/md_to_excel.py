@@ -33,7 +33,7 @@ class MarkdownToExcelConverter:
     def _parse_markdown_tables(self, md_content):
         """解析Markdown中的表格，返回标题和表格数据"""
         # 使用正则表达式匹配markdown表格
-        table_pattern = r'(\|.*\|)\n\|([ \-:|]*)\|\n((?:\|.*\|\n)*)'
+        table_pattern = r'[ ]*(\|.*\|)[ ]*\n[ ]*\|([ \-:|]*)\|[ ]*\n((?:[ ]*\|.*\|[ ]*\n)*)'
         tables = []
         
         for i, match in enumerate(re.finditer(table_pattern, md_content)):
